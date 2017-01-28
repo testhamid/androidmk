@@ -1,0 +1,8 @@
+<h2>{{ categoryName }}</h2>
+
+
+<ul>
+    <li ng-repeat="item in items">
+        <a href="#/item/{{item.name}}">{{item.name}}</a> : ${{item.cost}}
+    </li>
+</ul>

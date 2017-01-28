@@ -1,0 +1,30 @@
+<div class="row" ng-controller="customersCtrl">
+    <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="x in myData">
+        <div class="thumbnail search-thumbnail">
+            <a href="{{ 'appDetail/' + x.appId}}">
+                <img class="media-object" alt="100%x200"
+                     src="{{ x.icon.substring(0,6) == 'http://' ? x.icon : 'http:' + x.icon }}"
+                     data-holder-rendered="true"
+                     style="height: 200px; width: 100%; display: block;">
+            </a>
+            <div class="caption">
+                <div class="clearfix">
+                    <button class="btn btn-xs btn-success pull-right"
+                            onclick="window.location.href='app/'">
+                        <span class="bigger-110">FREE</span>
+
+                        <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                    </button>
+                    <span class="score"><span style="width: {{x.score * 20 || 0}}%"></span>
+</span>
+
+                </div>
+
+                <a href="{{ '#/appDetail/' + x.appId}}" class="blue">{{ x.title }}</a>
+                <p>{{ x.developer.devId }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="space-12"></div>
+</div>
