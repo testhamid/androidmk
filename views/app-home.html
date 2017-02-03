@@ -1,4 +1,5 @@
-<div class="row" ng-controller="customersCtrl">
+<div ng-show="loading" class="loading">LOADING...</div>
+<div ng-show="!loading" class="row" ng-controller="customersCtrl">
     <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="x in myData">
         <div class="thumbnail search-thumbnail">
             <a href="{{ 'appDetail/' + x.appId}}">
